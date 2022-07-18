@@ -8,9 +8,9 @@ loses = 0
 ties = 0
 
 # print welcome statement
-print("\nHello! Welcome to the RPS game!")
+print("\nHello! Welcome to the RPS game!\n")
 time.sleep(2)
-print("\nYou and the computer will pick between rock, paper, and scissors to see who wins!")
+print("You and the computer will pick between rock, paper, and scissors to see who wins!\n")
 time.sleep(3.5)
 
 # the "while True" code here will allow the program to run until the play_again == "n"
@@ -25,7 +25,7 @@ while True:
     computer_action = random.choice(action_list)
 
     # user selects their choice
-    print("\nPlease make your selection!")
+    print("Please make your selection!\n")
     user_action = input("rock, paper, or scissors?: ")
 
     # added delay/sleep for "counting off"
@@ -36,46 +36,46 @@ while True:
     time.sleep(.5)
     print("scissors...")
     time.sleep(.5)
-    print("SHOOT!")
+    print("SHOOT!\n")
     time.sleep(.5)
 
     # print choices for user to see
-    print(f"\nYou picked {user_action} and the computer picked {computer_action}")
+    print(f"You picked {user_action} and the computer picked {computer_action}\n")
 
     # determine winner!
     # start with tie conditions to remove extra conditions
     # the wins/loses/ties +=1 added to the counters
     if computer_action == user_action: 
-        print("\nIt's a tie!")
+        print("It's a tie!\n")
         ties += 1
     elif user_action == "rock":
         if computer_action == "paper":
-            print("\nPaper covers rock! You lose.")
+            print("Paper covers rock! You lose.\n")
             loses += 1
         else:
-            print("\nRock crushes scissors! You win!")
+            print("Rock crushes scissors! You win!\n")
             wins += 1
     elif user_action == "paper":
         if computer_action == "scissors":
-            print("\nScissors cuts paper! You lose.")
+            print("Scissors cuts paper! You lose.\n")
             loses += 1
         else:
-            print("\nPaper covers rock! You win!")
+            print("Paper covers rock! You win!\n")
             wins += 1
     elif user_action == "scissors":
         if computer_action == "rock":
-            print("\nRock crushes scissors! You lose.")
+            print("Rock crushes scissors! You lose.\n")
             loses += 1
         else:
-            print("\nScissors cuts paper! You win!")
+            print("Scissors cuts paper! You win!\n")
             wins += 1
 
     # show score counter
-    print(f"\nYou currently have {wins} wins, {loses} loses, and {ties} ties.")
+    print(f"You have {wins} wins, {loses} loses, and {ties} ties.\n")
 
     # rerun code to play again
-    play_again = input("\nPlay again? (y/n): ")
+    play_again = input("Play again? (y/n): ")
     if play_again != "y":
-        print("\nThanks for playing!")
+        print("Thanks for playing!\n")
         time.sleep(1)
         break
